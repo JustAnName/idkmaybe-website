@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> HI it is idle game </title>
+</head>
+<body>
+   <p> Here is how much you have </p>
+   <p id="showsomecurrency"> here is it </p> 
+   <button class="Click" onclick="addsome()"> add some of money</button>
+   <button class="Click" onclick="wastetoget()"> waste some</button>
+  <script>
+  let currency,adder,numberoffirst;
+  currency=1;
+  adder=1;
+  numberoffirst=1;
+  function addsome() {
+   currency+=adder;
+   document.getElementById("showsomecurrency").innerHTML = currency;
+  }
+  function wastetoget() {
+     if (currency >= numberoffirst * 20) {
+      adder+=1.1;
+	  currency-=numberoffirst * 20;
+	  numberoffirst+=1;
+	  document.getElementById("showsomecurrency").innerHTML = currency;
+     }
+    
+  }
+  </script>
+</body>
+
+</html>
