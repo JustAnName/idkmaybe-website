@@ -16,7 +16,7 @@ let currency,adder,numberoffirst;numbersofupgrades;adderofadder;
 	  document.getElementById("showsomecurrency").innerHTML = currency;
 	  document.getElementById("showtheprice").innerHTML = "current price is " + numberoffirst * riserinprice;
      }
-  }
+    }
   function upgradeandwaster() {
      switch(numbersofupgrades){
 		 case 1:
