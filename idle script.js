@@ -20,16 +20,18 @@ let currency,adder,numberoffirst;numbersofupgrades;adderofadder;
   function upgradeandwaster() {
      switch(numbersofupgrades){
 		 case 1:
-		   if(currency >= 200)
+		   if(currency >= 200) {
 			   riserinprice =riserinprice * 0.8;
 		       document.getElementById("nextupdate").innerHTML = "you need"+2000+"for next upgrade";
 			   numbersofupgrades+=1;
+		   }
 		  case 2:
-		    if(currency >= 2000)
+		    if(currency >= 2000){
 			   adder=adder*2;
 		       adderofadder=adderofadder*2;
 		       document.getElementById("nextupdate").innerHTML = "you need"+20000+"for next upgrade (not implemented)";
 			   numbersofupgrades+=1;
+			}
 		  default:
 		      document.getElementById("nextupdate").innerHTML = "There are no uprades anymore";
 	 }
