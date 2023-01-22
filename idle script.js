@@ -1,4 +1,4 @@
-let currency,adder,numberoffirst;numbersofupgrades;adderofadder;
+let currency,adder,numberoffirst,numbersofupgrades,adderofadder;
   numbersofupgrades=1;
   currency=1;
   adder=1;
