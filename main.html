@@ -6,16 +6,24 @@
 	<title> HI it is idle game </title>
 </head>
 <body>
-   <p> Here is how much you have </p>
-   <p id="showsomecurrency" align="center"> here is it </p> 
+   <div id="gameplay" style="display:none">
+    <p> Here is how much you have </p>
+    <p id="showsomecurrency" align="center"> here is it </p> 
    
-   <button class="Click" onclick="addsome()"> add some of money</button>
-   <button class="Click" onclick="wastetoget()"> waste some</button>
-   <button class="Click" onclick="upgradeandwaster()"> Upgrade something</button>
-   <p id="nextupdate"> you need 200 for upgrade</p>
-  <script src="idle script.js"> </script>
-   <p id="showtheprice"> here is it </p> 
-   
+    <button class="Click" onclick="addsome()"> add some of money</button>
+    <button class="Click" onclick="wastetoget()"> waste some</button>
+    <button class="Click" onclick="upgradeandwaster()"> Upgrade something</button>
+    <p id="nextupdate"> you need 200 for upgrade</p>
+
+    <p id="showtheprice"> here is it </p> 
+   </div>
+    <script src="idle script.js"> </script>
+	
+    <div id="loadmenu" style="display:">
+	 <button class="Click" onclick="newgame()" style="display:inline">new game?</button><p style="display:inline"> or</p> <button class="Click" onclick="loadgame()" style="display:inline"> load?</button>
+
+	
+	</div>
 </body>
 
 </html>
