@@ -165,11 +165,13 @@ let upgrade_4,upgrade_4_unlocked=false;
 			}
 			break;
 		  case 3:
-			upgrade_4_unlocked=true;
-			currency-=20000;
-			numbersofupgrades+=1;
-			currencyupdater()
-			rootwaster()
+			if(currency >= 20000){
+				upgrade_4_unlocked=true;
+				currency-=20000;
+				numbersofupgrades+=1;
+				currencyupdater()
+				rootwaster()
+			}
 		  default:
 			upgradestate=3;
 			currencyupdater()
