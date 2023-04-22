@@ -7,15 +7,16 @@
 </head>
 <body>
    <div id="gameplay" style="display:none">
-    <p> Here is how much you have </p>
     <p id="showsomecurrency" align="center"> here is it </p> 
    
     <button class="Click" onclick="addsome()"> add some of money</button>
     <button class="Click" onclick="wastetoget()"> waste some</button>
     <button class="Click" onclick="upgradeandwaster()"> Upgrade something</button>
+	<button class="Click" onclick="moneysymbolchangerindex()"> Change currency</button>
     <p id="nextupdate"> you need 200 for upgrade</p>
 
     <p id="showtheprice"> here is it </p> 
+	<button class="Click" onclick="Prestige()" id="PrestigeButton" style="display:none"> PRESTIGE</button>
    </div>
     <script src="idle script.js"> </script>
 	
@@ -23,6 +24,11 @@
 	 <button class="Click" onclick="newgame()" style="display:inline">new game?</button><p style="display:inline"> or</p> <button class="Click" onclick="loadgame()" style="display:inline"> load?</button>
 
 	
+	</div>
+	<div id="prestige" style="display:none">
+			<p id="gold_currency"> 1 gold</p>
+			<button class="Click" onclick="PrestigeUpgrade(1)" id="PrestigeUpgrade_1" style="display:inline"> Autoclicker</button>  <button class="Click" onclick="PrestigeUpgrade(2)" id="PrestigeUpgrade_2" style="display:inline"> Multiplier</button>
+			<button class="Click" onclick="Prestige_back()" id="PrestigeButton_back"> Go back</button>
 	</div>
 </body>
 
