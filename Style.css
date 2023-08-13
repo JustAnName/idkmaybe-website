@@ -1,0 +1,27 @@
+ body{
+	background-color: rgba(1, 60, 160, 0.3);
+	 
+ }
+ 
+ 
+ .title{
+	text-align:center ;
+	color: transparent;
+	font-size: 50px;
+	background-clip: text;
+	background-size: 200% auto;
+	animation-name: gradients;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+@keyframes gradients {
+  0%   {background-color:red;}
+  50%  {background-color:blue;}
+}
+
+ .big{
+	font-size: 18px;
+
+	
+	
+}

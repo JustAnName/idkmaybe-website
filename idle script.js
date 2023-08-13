@@ -3,13 +3,25 @@ let prestigeval,interval_clicker,prestigecurrency,x;
 let price_1,price_2,multiplier;
 let upgrade_4,upgrade_4_unlocked=false;
 
-  moneysymbolindexmax=2;
+  moneysymbolindexmax=5;
   function moneysymbolchanger(){
 	  if (moneysymbolindex==1){
 		  moneysymbol="dollars";
 	  }
 	  if (moneysymbolindex==2){
 		  moneysymbol="euros";
+		  
+	  }
+	  if (moneysymbolindex==3){
+		  moneysymbol="Bakels";
+		  
+	  }
+	  if (moneysymbolindex==4){
+		  moneysymbol="Sealandballs";
+		  
+	  }
+	  if (moneysymbolindex==5){
+		  moneysymbol="Zacks";
 		  
 	  }
 	  currencyupdater();
@@ -41,7 +53,7 @@ let upgrade_4,upgrade_4_unlocked=false;
 			document.getElementById("nextupdate").innerHTML = "you need "+currency_needed_to_update+" "+moneysymbol+" for next upgrade";
 			break;
 		case 3:
-			document.getElementById("nextupdate").innerHTML = "Upgrade are unavaible rn.Check in next update!";
+			document.getElementById("nextupdate").innerHTML = "Upgrades are unavailable rn.Check in next update!";
 			break;
 	  }
 	  PrestigeShow();
@@ -89,8 +101,8 @@ let upgrade_4,upgrade_4_unlocked=false;
 	localStorage.setItem("price_2", price_2);
 	localStorage.setItem("multiplier", multiplier);
 	localStorage.setItem("upgradestate", upgradestate);
-	localStorage.setItem("currency_needed_to_update", nextprice);
-	localStorage.setItem("currency", currency);
+	localStorage.setItem("nextprice", nextprice);
+	localStorage.setItem("currency_needed_to_update", currency_needed_to_update);
 	localStorage.setItem("currency", currency);
 	localStorage.setItem("currency", currency);
 	localStorage.setItem("currency", currency);
@@ -121,6 +133,7 @@ let upgrade_4,upgrade_4_unlocked=false;
 	  upgrade_4=parseInt(localStorage.getItem("upgrade_4"));
 	  upgrade_4_unlocked=Boolean(localStorage.getItem("upgrade_4"));
 	  currency_needed_to_update=parseInt(localStorage.getItem("currency_needed_to_update"));
+	  nextprice=parseInt(localStorage.getItem("nextprice"));
       moneysymbolchanger();
 	  document.getElementById("gameplay").style.display="";
 	  document.getElementById("loadmenu").style.display="none";
