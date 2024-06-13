@@ -33,7 +33,7 @@ window.addEventListener("load", function (event) {
   function currencyupdater(){
 	  document.getElementById("showsomecurrency").innerHTML = Math.round(currency)+" "+moneysymbol;
 	  document.getElementById("showtheprice").innerHTML = "current price is " + nextprice+" "+moneysymbol;
-	  if(currency>=1000000){
+	  if(currency>=100000){
 			document.getElementById("PrestigeButton").style.display="";
 		  
 		  
@@ -193,7 +193,7 @@ window.addEventListener("load", function (event) {
   }
 
   function PrestigeShow(){
-	  prestigeval=Math.round((currency/1000000)**0.5)
+	  prestigeval=Math.round((currency/100000)**0.55)
 	  document.getElementById("PrestigeButton").innerHTML = prestigeval+" gold";
 	  
   }
