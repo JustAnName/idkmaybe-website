@@ -97,8 +97,8 @@ window.addEventListener("load", function (event) {
 	localStorage.setItem("upgradestate", upgradestate);
 	localStorage.setItem("nextprice", nextprice);
 	localStorage.setItem("currency_needed_to_update", currency_needed_to_update);
-	localStorage.setItem("currency", currency);
-	localStorage.setItem("currency", currency);
+	localStorage.setItem("upgrade_4", upgrade_4);
+	localStorage.setItem("upgrade_4_unlocked", upgrade_4_unlocked);
 	localStorage.setItem("currency", currency);
 	localStorage.setItem("currency", currency);
 	localStorage.setItem("currency", currency);
@@ -125,7 +125,7 @@ window.addEventListener("load", function (event) {
 	  multiplier=parseInt(localStorage.getItem("multiplier"));
 	  upgradestate=parseInt(localStorage.getItem("upgradestate"));
 	  upgrade_4=parseInt(localStorage.getItem("upgrade_4"));
-	  upgrade_4_unlocked=Boolean(localStorage.getItem("upgrade_4"));
+	  upgrade_4_unlocked=Boolean(localStorage.getItem("upgrade_4_unlocked"));
 	  currency_needed_to_update=parseInt(localStorage.getItem("currency_needed_to_update"));
 	  nextprice=parseInt(localStorage.getItem("nextprice"));
       moneysymbolchanger();
