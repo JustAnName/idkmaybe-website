@@ -2,27 +2,20 @@ let currency,adder,numberoffirst,numbersofupgrades,adderofadder,riserinprice,add
 let prestigeval,interval_clicker,prestigecurrency,x;
 let price_1,price_2,multiplier;
 let upgrade_4,upgrade_4_unlocked=false;
+let nulle;
+nulle=localStorage.getItem("Saved")
+window.addEventListener("load", function (event) {
+    if (nulle==null){document.getElementById("loadB").style.display="none";}
+  });
 
-  moneysymbolindexmax=5;
+  upgrademax=3;
+  moneysymbolindexmax=2;
   function moneysymbolchanger(){
 	  if (moneysymbolindex==1){
 		  moneysymbol="dollars";
 	  }
 	  if (moneysymbolindex==2){
 		  moneysymbol="euros";
-		  
-	  }
-	  if (moneysymbolindex==3){
-		  moneysymbol="Bakels";
-		  
-	  }
-	  if (moneysymbolindex==4){
-		  moneysymbol="Sealandballs";
-		  
-	  }
-	  if (moneysymbolindex==5){
-		  moneysymbol="Zacks";
-		  
 	  }
 	  currencyupdater();
 		
@@ -75,13 +68,14 @@ let upgrade_4,upgrade_4_unlocked=false;
 	 prestigecurrency=0;
 	 x=0;
 	 upgrade_4=1;
+	 upgrade_4_unlocked=false;
 	 document.getElementById("gameplay").style.display="";
 	 document.getElementById("loadmenu").style.display="none";
 	 moneysymbolchanger();
-	 setInterval(savegame,6000)
+	 setInterval(savegame,20000)
   }
   function addsome() {
-   currency+=adder*multiplier;
+   currency+=adder*multiplier*upgrade_4;
    currencyupdater()
   }
   function savegame() {
@@ -92,7 +86,7 @@ let upgrade_4,upgrade_4_unlocked=false;
     localStorage.setItem("adderofadder",adderofadder);
 	localStorage.setItem("riserinprice", riserinprice);
 	localStorage.setItem("moneysymbolindex", moneysymbolindex);
-
+	localStorage.setItem("Saved", "true");
 	localStorage.setItem("prestigeval", prestigeval);
 	localStorage.setItem("interval_clicker", interval_clicker);
 	localStorage.setItem("prestigecurrency", currency);
@@ -137,7 +131,7 @@ let upgrade_4,upgrade_4_unlocked=false;
       moneysymbolchanger();
 	  document.getElementById("gameplay").style.display="";
 	  document.getElementById("loadmenu").style.display="none";
-	  setInterval(savegame,6000)
+	  setInterval(savegame,20000)
 	  if(x>0){
 		  interval_clicker=setInterval(autoclicker,1000/x);
 	  }
@@ -161,26 +155,26 @@ let upgrade_4,upgrade_4_unlocked=false;
 			   currency-=200;
 		       currencyupdater()
 			   upgradestate=1;
-			   currency_needed_to_update=2000;
+			   currency_needed_to_update=1500;
 			   numbersofupgrades+=1;
 			   currencyupdater()
 		   }
 		   break;
 		  case 2:
-		    if(currency >= 2000){
+		    if(currency >= 1500){
 			   adder=adder*2;
 		       adderofadder=adderofadder*2;
-			   currency -=2000;
+			   currency -=1500;
 			   upgradestate=1;
-			   currency_needed_to_update=20000;
+			   currency_needed_to_update=5000;
 			   numbersofupgrades+=1;
 			   currencyupdater()
 			}
 			break;
 		  case 3:
-			if(currency >= 20000){
+			if(currency >= 5000){
 				upgrade_4_unlocked=true;
-				currency-=20000;
+				currency-=5000;
 				numbersofupgrades+=1;
 				currencyupdater()
 				rootwaster()
@@ -218,6 +212,8 @@ let upgrade_4,upgrade_4_unlocked=false;
 	 nextprice=20;
 	 upgradestate=1;
 	 currency_needed_to_update=200;
+	 upgrade_4=1;
+	 upgrade_4_unlocked=false;
 	  document.getElementById("gameplay").style.display="none";
 	  document.getElementById("prestige").style.display="";
 	  document.getElementById("gold_currency").innerHTML = prestigecurrency+" gold";
