@@ -298,7 +298,7 @@ window.addEventListener("load", function (event) {
 				x+=1;
 				clearInterval(interval_clicker);
 				if((x>0) && (x<11)){
-					interval_clicker=setInterval(autoclicker,1000/x);
+					interval_clicker=setInterval(autoclicker,1000/x,10);
 				}
 				if(x>10){interval_clicker=setInterval(autoclicker,100,x);}
 				P_upg_des(1)
