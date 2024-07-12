@@ -9,12 +9,12 @@
    <div id="gameplay" style="display:none">
     <p id="showsomecurrency" align="center"> here is it </p> 
    
-    <button class="Click" onclick="addsome()"> add some of money</button>
+    <button class="Click" onclick="addsome()" desc="Basic example sample"> add some of money</button>
     <button class="Click" onclick="wastetoget()"> waste some</button>
     <button class="Click" onclick="upgradeandwaster()"> Upgrade something</button>
 	<button class="Click" onclick="moneysymbolchangerindex()"> Change currency</button>
     <p id="nextupdate"> you need 200 for upgrade</p>
-
+	<p id="upd_desc">Makes your wasters much cheaper</p>
     <p id="showtheprice"> here is it </p> 
 	<button class="Click" onclick="Prestige()" id="PrestigeButton" style="display:none"> PRESTIGE</button>
    </div>
@@ -28,8 +28,21 @@
 	</div>
 	<div id="prestige" style="display:none">
 			<p id="gold_currency"> 1 gold</p>
-			<button class="Click" onclick="PrestigeUpgrade(1)" id="PrestigeUpgrade_1" style="display:inline"> Autoclicker</button>  <button class="Click" onclick="PrestigeUpgrade(2)" id="PrestigeUpgrade_2" style="display:inline"> Multiplier</button>
+			<button class="Click" onclick="PrestigeUpgrade(1)" id="PrestigeUpgrade_1" style="display:inline" onmouseover="P_upg_des(1)" onmouseout="P_upg_des()"> Autoclicker</button>  
+			<button class="Click" onclick="PrestigeUpgrade(2)" id="PrestigeUpgrade_2" style="display:inline" onmouseover="P_upg_des(2)" onmouseout="P_upg_des()"> Multiplier</button>
+			<p id="p_desc"></p>
 			<button class="Click" onclick="Prestige_back()" id="PrestigeButton_back"> Go back</button>
+	</div>
+	<div id="desc"  width="50" style="display:none"> 
+		<p id="desc_name">The item</p>
+		<video id="desc_image" width="85%" height="180" autoplay muted loop src="Videos/0001-0089.mp4"> 
+			A floating red mask
+		</video>
+		<p id="desc_desc">"That is some item"</p>
+	
+	
+	
+	
 	</div>
 </body>
 
